@@ -1,0 +1,11 @@
+.Details-label {
+  color: #747475;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.Details-delimeter {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 0.8rem 0.2rem;
+}

@@ -1,0 +1,13 @@
+.ProfileImage {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.ProfileImage-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
