@@ -16,13 +16,13 @@ class App extends Component {
           label="About"
           value={
             <>
-              Building applications with Typescript and React @
+              Building applications with TypeScript and React @
               <a href="https://www.simplinic.de/">simplinic</a>.
             </>
           }
         />
         <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
-        <Details label="Location" value="Saint-Petersburg, Russia" />
+        <Details label="Location" value="Saint Petersburg, Russia" />
       </main>
     )
   }

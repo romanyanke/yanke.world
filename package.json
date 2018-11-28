@@ -2,6 +2,7 @@
   "name": "yanke",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yanke.ru",
   "dependencies": {
     "@types/jest": "23.3.9",
     "@types/node": "10.12.10",
