@@ -8,10 +8,14 @@
     "@types/node": "10.12.10",
     "@types/react": "16.7.7",
     "@types/react-dom": "16.0.10",
+    "daynight": "^1.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
     "typescript": "3.1.6"
+  },
+  "reactSnap": {
+    "inlineCss": true
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",

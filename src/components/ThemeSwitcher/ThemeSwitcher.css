@@ -1,0 +1,13 @@
+.ThemeSwitcher-button {
+  border: 0;
+  background: transparent;
+  appearance: none;
+  font-size: 26px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ThemeSwitcher-button:focus {
+  outline-color: orangered;
+}

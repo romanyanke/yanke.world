@@ -9,3 +9,7 @@
   border-top: 1px solid #ddd;
   margin: 0.8rem 0.2rem;
 }
+
+.dark .Details-delimeter {
+  border-top-color: #505050;
+}
