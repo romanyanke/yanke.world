@@ -8,7 +8,7 @@ const ThemeSwitcher: React.SFC<IThemeSwitcherProps> = props => {
   const { theme, onChange } = props
 
   return (
-    <button onClick={() => onChange()} className="ThemeSwitcher-button">
+    <button onClick={onChange} className="ThemeSwitcher-button">
       {theme === Theme.dark ? sunIcon : moonIcon}
     </button>
   )

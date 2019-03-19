@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Details from '../Details'
 import { Theme } from '../ThemeSwitcher/ThemeSwitcher.interface'
 import ProfileImage from '../ProfileImage'
+import ThemeSwitcher from '../ThemeSwitcher'
 import daynight from 'daynight'
 import { IAppState } from './App.interface'
 
@@ -28,9 +29,9 @@ class App extends Component<{}, IAppState> {
       <div className={`App ${themed}`}>
         <div className="App-container">
           <header className="App-header">
-            {/* <div className="App-theme-switcher">
+            <div className="App-theme-switcher">
               <ThemeSwitcher theme={theme} onChange={this.changeTheme} />
-            </div> */}
+            </div>
             <ProfileImage />
           </header>
 
