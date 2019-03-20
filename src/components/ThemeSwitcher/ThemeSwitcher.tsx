@@ -1,15 +1,13 @@
 import React from 'react'
 import { IThemeSwitcherProps, Theme } from './ThemeSwitcher.interface'
-
-const sunIcon = '☀️'
-const moonIcon = '🌛'
+import { swapTheme, ThemeIcon } from './ThemeSwitcher.utils'
 
 const ThemeSwitcher: React.SFC<IThemeSwitcherProps> = props => {
   const { theme, onChange } = props
 
   return (
-    <button onClick={onChange} className="ThemeSwitcher-button">
-      {theme === Theme.dark ? sunIcon : moonIcon}
+    <button onClick={() => onChange(swapTheme(theme))} className="ThemeSwitcher-button">
+      {theme === Theme.dark ? ThemeIcon.sunIcon : ThemeIcon.moonIcon}
     </button>
   )
 }

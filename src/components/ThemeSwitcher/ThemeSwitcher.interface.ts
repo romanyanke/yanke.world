@@ -7,5 +7,5 @@ export enum Theme {
 
 export interface IThemeSwitcherOwnProps {
   theme: Theme
-  onChange(): void
+  onChange(theme: Theme): void
 }
