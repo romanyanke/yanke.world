@@ -5,7 +5,7 @@
   "homepage": "https://yanke.ru",
   "dependencies": {
     "@types/jest": "23.3.9",
-    "daynight": "^1.0.1",
+    "daynight": "^1.0.2",
     "typescript": "3.1.6"
   },
   "reactSnap": {
