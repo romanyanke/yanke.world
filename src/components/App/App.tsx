@@ -10,7 +10,8 @@ const App: React.SFC = () => {
   const [theme, setTheme] = useState<Theme>(Theme.light)
   const themed = Theme[theme]
   useEffect(() => {
-    setTheme(daynight() ? Theme.light : Theme.dark)
+    const day = daynight()
+    setTheme(!day.error && day.light ? Theme.light : Theme.dark)
   }, [])
 
   return (
