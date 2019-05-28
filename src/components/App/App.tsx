@@ -18,7 +18,7 @@ const App: React.SFC = () => {
     <div className={`App ${themed}`}>
       <div className="App-container">
         <header className="App-header">
-          <div className="App-theme-switcher">
+          <div hidden className="App-theme-switcher">
             <ThemeSwitcher theme={theme} onChange={setTheme} />
           </div>
           <ProfileImage />
