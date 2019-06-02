@@ -1,15 +1,21 @@
-.Details-label {
+dt {
   color: #747475;
   margin-bottom: 0.2rem;
   font-size: 0.8rem;
 }
 
-.Details-delimeter {
-  border: 0;
-  border-top: 1px solid #ddd;
+dd {
+  margin: 0;
+}
+
+dd:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #ddd;
   margin: 0.8rem 0.2rem;
 }
 
-.dark .Details-delimeter {
-  border-top-color: #505050;
+.dark dd:after {
+  background: #505050;
 }

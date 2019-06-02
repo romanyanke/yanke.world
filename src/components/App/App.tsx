@@ -16,27 +16,29 @@ const App: React.SFC = () => {
 
   return (
     <div className={`App ${themed}`}>
-      <div className="App-container">
-        <header className="App-header">
-          <div hidden className="App-theme-switcher">
+      <main className="App-container">
+        <section className="App-header">
+          <div aria-hidden="true" className="App-theme-switcher">
             <ThemeSwitcher theme={theme} onChange={setTheme} />
           </div>
           <ProfileImage />
-        </header>
+        </section>
 
-        <Details label="Username" value="romanyanke" />
-        <Details
-          label="About"
-          value={
-            <>
-              Building applications with TypeScript and React @
-              <a href="https://www.simplinic.de/">simplinic</a>.
-            </>
-          }
-        />
-        <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
-        <Details label="Location" value="Saint Petersburg, Russia" />
-      </div>
+        <dl>
+          <Details label="Username" value="romanyanke" />
+          <Details
+            label="About"
+            value={
+              <>
+                Building applications with TypeScript and React @
+                <a href="https://www.simplinic.de/">simplinic</a>.
+              </>
+            }
+          />
+          <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
+          <Details label="Location" value="Saint Petersburg, Russia" />
+        </dl>
+      </main>
     </div>
   )
 }
