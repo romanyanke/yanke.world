@@ -5,6 +5,7 @@ import { Theme } from '../ThemeSwitcher/ThemeSwitcher.interface'
 import ProfileImage from '../ProfileImage'
 import ThemeSwitcher from '../ThemeSwitcher'
 import daynight from 'daynight'
+import Pencils from '../Pencils'
 
 const App: React.SFC = () => {
   const [theme, setTheme] = useState<Theme>(Theme.light)
@@ -37,6 +38,7 @@ const App: React.SFC = () => {
           />
           <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
           <Details label="Location" value="Saint Petersburg, Russia" />
+          <Pencils />
         </dl>
       </main>
     </div>
