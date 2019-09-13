@@ -4,8 +4,8 @@ import profilePicture from './assets/romanyanke.jpg'
 import profilePicture2 from './assets/romanyanke@2x.jpg'
 import profilePicture3 from './assets/romanyanke@3x.jpg'
 
-const ProfileImage = () => {
-  return (
+const ProfileImage = () =>
+  (
     <div className="ProfileImage">
       <img
         width="300"
@@ -17,6 +17,5 @@ const ProfileImage = () => {
       <strong className="ProfileImage-caption">Roman Yanke</strong>
     </div>
   )
-}
 
 export default ProfileImage
