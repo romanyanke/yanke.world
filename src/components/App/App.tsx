@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
+import daynight from 'daynight'
 import Details from '../Details'
-import { Theme } from '../ThemeSwitcher/ThemeSwitcher.interface'
+import Pencils from '../Pencils'
 import ProfileImage from '../ProfileImage'
 import ThemeSwitcher from '../ThemeSwitcher'
-import daynight from 'daynight'
-import Pencils from '../Pencils'
+import { Theme } from '../ThemeSwitcher/ThemeSwitcher.interface'
 
 const App: React.SFC = () => {
   const [theme, setTheme] = useState<Theme>(Theme.light)
