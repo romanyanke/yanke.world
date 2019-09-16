@@ -18,7 +18,7 @@ const Pencils = () => {
       label="Hobby"
       value={
         <span>
-          I have <a href="http://pencil.yanke.ru/">{info}</a>.
+          I have <a href="https://pencil.yanke.ru/">{info}</a>.
         </span>
       }
     />
