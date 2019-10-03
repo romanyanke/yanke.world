@@ -3,7 +3,7 @@ import Details from '../Details'
 import { Description } from './Pencils.interface'
 
 const Pencils = () => {
-  const [info, setInfo] = useState<null | string>(null)
+  const [info, setInfo] = useState('a collection of pencils')
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('https://romanyanke.github.io/pencilbox-static/description/')
@@ -13,7 +13,7 @@ const Pencils = () => {
     fetchData()
   }, [])
 
-  return info ? (
+  return (
     <Details
       label="Hobby"
       value={
@@ -22,7 +22,7 @@ const Pencils = () => {
         </span>
       }
     />
-  ) : null
+  )
 }
 
 export default Pencils

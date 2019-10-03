@@ -1,4 +1,4 @@
-export type IDetailsProps = DetailsOwnProps
+export type DetailsProps = DetailsOwnProps
 
 export interface DetailsOwnProps {
   label: string | React.ReactNode

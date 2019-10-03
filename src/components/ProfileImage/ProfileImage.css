@@ -1,13 +1,17 @@
 .ProfileImage {
   width: 300px;
   height: 300px;
+  position: relative;
 }
 
 .ProfileImage-caption {
   position: absolute;
+  z-index: 1;
+  margin: 0;
+  line-height: 1;
   bottom: 10px;
   left: 10px;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.6rem;
 }
 

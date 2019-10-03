@@ -1,7 +1,7 @@
 import React from 'react'
-import { IDetailsProps } from './Details.interface'
+import { DetailsProps } from './Details.interface'
 
-const Details = ({ label, value }: IDetailsProps) => (
+const Details = ({ label, value }: DetailsProps) => (
   <>
     <dt>{label}</dt>
     <dd>{value}</dd>

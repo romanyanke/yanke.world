@@ -1,6 +1,7 @@
 :root {
   --background: #f7f7f7;
   --text: #2c2d30;
+  --caption: #747475;
   --link: #1264a3;
   --link-hover: #0b4c8c;
   --delimeter: #ddd;
@@ -11,6 +12,7 @@
   :root {
     --background: #282c35;
     --text: #ffffe0;
+    --caption: #919191;
     --link: #e88030;
     --link-hover: #ff9c52;
     --delimeter: #505050;

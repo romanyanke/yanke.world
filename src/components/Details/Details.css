@@ -1,5 +1,5 @@
 dt {
-  color: #747475;
+  color: var(--caption);
   margin-bottom: 0.2rem;
   font-size: 0.8rem;
 }
