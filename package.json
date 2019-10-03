@@ -27,7 +27,6 @@
     "@types/node": "^12.7.5",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "daynight": "^2.0.7",
     "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
