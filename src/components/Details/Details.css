@@ -12,10 +12,6 @@ dd:after {
   content: '';
   display: block;
   height: 1px;
-  background: #ddd;
+  background: var(--delimeter);
   margin: 0.8rem 0.2rem;
-}
-
-.dark dd:after {
-  background: #505050;
 }

@@ -11,6 +11,6 @@
   font-size: 1.6rem;
 }
 
-.dark .ProfileImage img {
-  filter: brightness(0.75);
+.ProfileImage img {
+  filter: var(--image-filter);
 }
