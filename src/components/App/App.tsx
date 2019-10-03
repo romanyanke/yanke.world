@@ -1,48 +1,32 @@
-import React, { useEffect, useState } from 'react'
-
-import daynight from 'daynight'
+import React from 'react'
 import Details from '../Details'
 import Pencils from '../Pencils'
 import ProfileImage from '../ProfileImage'
-import ThemeSwitcher from '../ThemeSwitcher'
-import { Theme } from '../ThemeSwitcher/ThemeSwitcher.interface'
 
-const App: React.SFC = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.light)
-  const themed = Theme[theme]
-  useEffect(() => {
-    const day = daynight()
-    setTheme(!day.error && day.light ? Theme.light : Theme.dark)
-  }, [])
+const App = () => (
+  <div className="App">
+    <main className="App-container">
+      <section className="App-header">
+        <ProfileImage />
+      </section>
 
-  return (
-    <div className={`App ${themed}`}>
-      <main className="App-container">
-        <section className="App-header">
-          <div aria-hidden="true" className="App-theme-switcher">
-            <ThemeSwitcher theme={theme} onChange={setTheme} />
-          </div>
-          <ProfileImage />
-        </section>
-
-        <dl>
-          <Details label="Username" value="romanyanke" />
-          <Details
-            label="About"
-            value={
-              <>
-                Building applications with TypeScript and React @
-                <a href="https://www.simplinic.de/">simplinic</a>.
-              </>
-            }
-          />
-          <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
-          <Details label="Location" value="Saint Petersburg, Russia" />
-          <Pencils />
-        </dl>
-      </main>
-    </div>
-  )
-}
+      <dl>
+        <Details label="Username" value="romanyanke" />
+        <Details
+          label="About"
+          value={
+            <>
+              Building applications with TypeScript and React @
+              <a href="https://www.simplinic.de/">simplinic</a>.
+            </>
+          }
+        />
+        <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
+        <Details label="Location" value="Saint Petersburg, Russia" />
+        <Pencils />
+      </dl>
+    </main>
+  </div>
+)
 
 export default App
