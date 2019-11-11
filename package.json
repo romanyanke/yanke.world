@@ -23,19 +23,19 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "^12.7.9",
-    "@types/react": "^16.9.4",
-    "@types/react-dom": "^16.9.1",
+    "@types/jest": "24.0.22",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
     "gh-pages": "^2.1.1",
-    "prettier": "^1.18.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "prettier": "^1.19.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-scripts": "^3.2.0",
     "react-snap": "^1.23.0",
-    "tslint": "^5.20.0",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react-hooks": "^2.2.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.2"
   }
 }
