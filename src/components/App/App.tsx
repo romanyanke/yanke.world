@@ -1,5 +1,6 @@
 import React from 'react'
 import Details from '../Details'
+import Links from '../Links'
 import Pencils from '../Pencils'
 import ProfileImage from '../ProfileImage'
 import ThemeSwitcher from '../ThemeSwitcher'
@@ -20,7 +21,7 @@ const App = () => {
 
         <main>
           <dl>
-            <Details label="Username" value="romanyanke" />
+            <Details label="Handle" value={<Links />} />
             <Details
               label="About"
               value={
