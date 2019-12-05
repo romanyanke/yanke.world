@@ -1,4 +1,4 @@
-:root {
+.light {
   --background: #f7f7f7;
   --text: #2c2d30;
   --caption: #747475;
@@ -8,16 +8,14 @@
   --image-filter: none;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --background: #282c35;
-    --text: #ffffe0;
-    --caption: #919191;
-    --link: #e88030;
-    --link-hover: #ff9c52;
-    --delimeter: #505050;
-    --image-filter: brightness(0.75);
-  }
+.dark {
+  --background: #282c35;
+  --text: #ffffe0;
+  --caption: #919191;
+  --link: #e88030;
+  --link-hover: #ff9c52;
+  --delimeter: #505050;
+  --image-filter: brightness(0.75);
 }
 
 body {
