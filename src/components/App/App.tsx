@@ -26,8 +26,7 @@ const App = () => {
               label="About"
               value={
                 <>
-                  Building applications with TypeScript and React @
-                  <a href="https://www.simplinic.de/">simplinic</a>.
+                  Lead Frontend Engineer @<a href="https://www.simplinic.de/">simplinic</a>.
                 </>
               }
             />
