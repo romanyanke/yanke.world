@@ -11,7 +11,10 @@
     "build": "react-scripts build",
     "postbuild": "react-snap",
     "test": "react-scripts test",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build",
+    "prettier": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
+    "eslint": "eslint --fix 'src/**/*.{ts,tsx}'",
+    "lint": "npm run eslint && npm run prettier"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,20 +26,17 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/jest": "24.0.25",
-    "@types/node": "^13.1.1",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
+    "@types/jest": "25.1.3",
+    "@types/node": "^13.7.7",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
     "daynight": "^2.0.8",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "^3.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "^3.4.0",
     "react-snap": "^1.23.0",
-    "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react-hooks": "^2.2.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   }
 }
