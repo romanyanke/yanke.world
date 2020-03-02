@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Details from '../Details'
 import { Description } from './Pencils.interface'
+import Details from '../Details'
 
 const Pencils = () => {
   const [info, setInfo] = useState('a collection of pencils')

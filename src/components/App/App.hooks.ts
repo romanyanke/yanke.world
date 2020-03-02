@@ -17,6 +17,7 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     darkModeMediaQuery.addListener(darkModeListener)
+
     return () => {
       darkModeMediaQuery.removeListener(darkModeListener)
     }

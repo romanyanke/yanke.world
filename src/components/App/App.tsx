@@ -1,10 +1,10 @@
 import React from 'react'
+import { useDarkMode } from './App.hooks'
 import Details from '../Details'
 import Links from '../Links'
 import Pencils from '../Pencils'
 import ProfileImage from '../ProfileImage'
 import ThemeSwitcher from '../ThemeSwitcher'
-import { useDarkMode } from './App.hooks'
 
 const App = () => {
   const [darkMode, setDarkMode] = useDarkMode()
