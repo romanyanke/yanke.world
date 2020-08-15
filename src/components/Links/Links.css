@@ -21,6 +21,7 @@
 
 .Links-link path {
   fill: var(--text);
+  transition: fill var(--transition-options);
 }
 
 .Links-link:hover svg {

@@ -14,4 +14,5 @@ dd:after {
   height: 1px;
   background: var(--delimeter);
   margin: 0.8rem 0.2rem;
+  transition: background var(--transition-options);
 }
