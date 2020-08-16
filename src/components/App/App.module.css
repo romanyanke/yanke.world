@@ -1,0 +1,4 @@
+.root {
+  width: var(--base-width);
+  margin: 2rem auto 0;
+}

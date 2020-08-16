@@ -1,0 +1,31 @@
+.links {
+  display: flex;
+}
+
+.handle {
+  flex: 1;
+}
+
+.link {
+  transition: all var(--transition-options);
+}
+.link + .link {
+  /* TODO: waiting for flex gap */
+  margin-left: 0.4rem;
+}
+.link svg {
+  height: 14px;
+  opacity: 0.5;
+}
+.link path {
+  fill: var(--text);
+  transition: fill var(--transition-options);
+}
+.link:hover,
+.link:focus {
+  transform: translateY(-2px);
+}
+.link:hover svg,
+.link:focus {
+  opacity: 0.8;
+}

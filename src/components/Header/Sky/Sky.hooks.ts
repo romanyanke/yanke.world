@@ -1,13 +1,13 @@
 import daynight from 'daynight'
 import { useCallback, useEffect, useState } from 'react'
-import { isSnapping } from './App.utils'
+import { isSnapping } from '../../App/App.utils'
+import styles from '../../../index.module.css'
 
 export const useDarkMode = () => {
   const day = daynight()
   const darkModeDaynight = day.error ? false : day.dark
-  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  const darkModeMediaQuery = matchMedia('(prefers-color-scheme: dark)')
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
-
   const [darkMode, setDarkMode] = useState(isDark)
   const darkModeListener = useCallback(
     ({ matches }: MediaQueryListEvent) => {
@@ -15,6 +15,10 @@ export const useDarkMode = () => {
     },
     [setDarkMode],
   )
+
+  const toggleDarkMode = useCallback(() => {
+    setDarkMode(!darkMode)
+  }, [setDarkMode, darkMode])
 
   useEffect(() => {
     darkModeMediaQuery.addListener(darkModeListener)
@@ -26,15 +30,17 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     if (!isSnapping) {
+      document.body.classList.add(styles.transitions)
+
       if (darkMode) {
-        document.body.classList.add('dark')
-        document.body.classList.remove('light')
+        document.body.classList.add(styles.dark)
+        document.body.classList.remove(styles.light)
       } else {
-        document.body.classList.add('light')
-        document.body.classList.remove('dark')
+        document.body.classList.add(styles.light)
+        document.body.classList.remove(styles.dark)
       }
     }
   }, [darkMode])
 
-  return [darkMode, setDarkMode] as const
+  return [darkMode, toggleDarkMode] as const
 }

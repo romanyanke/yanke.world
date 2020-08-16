@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Details from '../Details'
 import { restorePencilMessage, storePencilMessage } from './Pencils.utils'
+import Details from '../Details'
 
 const Pencils = () => {
   const [description, setDescription] = useState(restorePencilMessage())
+
+  useEffect(() => storePencilMessage(description), [description])
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('https://romanyanke.github.io/pencilbox-static/description/')
@@ -13,15 +16,13 @@ const Pencils = () => {
     fetchData()
   }, [])
 
-  useEffect(() => storePencilMessage(description), [description])
-
   return (
     <Details
       label="Hobby"
       value={
-        <span>
+        <>
           I have <a href="https://pencil.yanke.ru/">{description}</a>.
-        </span>
+        </>
       }
     />
   )

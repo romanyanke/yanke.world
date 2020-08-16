@@ -1,0 +1,35 @@
+.root {
+  position: relative;
+  clip-path: path(
+    'M275.8 292.3c-83.9 7.5-167.8 7.5-251.7 0-8.3-.8-15.7-8.2-16.4-16.4C.2 192 .2 108.1 7.7 24.2c.8-8.3 8.2-15.7 16.4-16.4C108 .3 191.9.3 275.8 7.8c8.3.8 15.7 8.2 16.4 16.4 7.5 83.9 7.5 167.8 0 251.7-.7 8.2-8.1 15.6-16.4 16.4z'
+  );
+}
+
+.root img {
+  filter: var(--image-filter);
+  display: block;
+  width: var(--base-width);
+  height: var(--base-width);
+}
+
+.root h1 {
+  color: #ffffe0;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  line-height: 1;
+  bottom: 0;
+  left: 0;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  right: 0;
+  text-align: center;
+}
+
+.theme {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}

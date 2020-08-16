@@ -1,49 +1,13 @@
-import React, { useEffect } from 'react'
-import { useDarkMode } from './App.hooks'
-import Details from '../Details'
-import Links from '../Links'
-import Pencils from '../Pencils'
-import ProfileImage from '../ProfileImage'
-import ThemeSwitcher from '../ThemeSwitcher'
-import { isSnapping } from './App.utils'
+import React from 'react'
+import styles from './App.module.css'
+import Header from '../Header'
+import Content from '../Content'
 
-const App = () => {
-  const [darkMode, setDarkMode] = useDarkMode()
-  useEffect(() => {
-    if (!isSnapping) {
-      document.body.classList.add('transitions')
-    }
-  })
-
-  return (
-    <div className="App">
-      <section className="App-container">
-        <header>
-          <ProfileImage />
-          <div className="App-theme">
-            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
-          </div>
-        </header>
-
-        <main>
-          <dl>
-            <Details label="Handle" value={<Links />} />
-            <Details
-              label="About"
-              value={
-                <>
-                  Lead Frontend Engineer @<a href="https://www.simplinic.de/">simplinic</a>.
-                </>
-              }
-            />
-            <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
-            <Details label="Location" value="Saint Petersburg, Russia" />
-            <Pencils />
-          </dl>
-        </main>
-      </section>
-    </div>
-  )
-}
+const App = () => (
+  <section className={styles.root}>
+    <Header />
+    <Content />
+  </section>
+)
 
 export default App

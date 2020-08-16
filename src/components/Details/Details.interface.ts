@@ -1,6 +1,0 @@
-export type DetailsProps = DetailsOwnProps
-
-export interface DetailsOwnProps {
-  label: string | React.ReactNode
-  value: string | React.ReactNode
-}

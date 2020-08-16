@@ -1,0 +1,34 @@
+dt {
+  color: var(--caption);
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+dd {
+  margin: 0;
+}
+
+dd:after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0.8rem 0.2rem;
+  transition: background-image var(--transition-options);
+  background-image: linear-gradient(var(--delimeter), var(--delimeter));
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  dd:after {
+    background-image: linear-gradient(var(--delimeter) 50%, transparent 51%);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  dd:after {
+    background-image: linear-gradient(var(--delimeter) 33%, transparent 34%);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 4) {
+  dd:after {
+    background-image: linear-gradient(var(--delimeter) 25%, transparent 26%);
+  }
+}
