@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDarkMode } from './App.hooks'
 import Details from '../Details'
 import Links from '../Links'
 import Pencils from '../Pencils'
 import ProfileImage from '../ProfileImage'
 import ThemeSwitcher from '../ThemeSwitcher'
+import { isSnapping } from './App.utils'
 
 const App = () => {
   const [darkMode, setDarkMode] = useDarkMode()
+  useEffect(() => {
+    if (!isSnapping) {
+      document.body.classList.add('transitions')
+    }
+  })
 
   return (
     <div className="App">
