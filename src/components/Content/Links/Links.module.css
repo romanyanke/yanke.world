@@ -1,18 +1,18 @@
 .links {
   display: flex;
+  align-items: center;
 }
 
 .handle {
-  flex: 1;
+  flex: 0;
 }
 
 .link {
+  flex: 1 1 auto;
+  text-align: center;
   transition: all var(--transition-options);
 }
-.link + .link {
-  /* TODO: waiting for flex gap */
-  margin-left: 0.4rem;
-}
+
 .link svg {
   height: 14px;
   opacity: 0.5;
