@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Sky.module.css'
 import { SkyProps, Celestial } from './Sky.interface'
 import { isSnapping } from '../../App/App.utils'

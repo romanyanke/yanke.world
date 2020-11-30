@@ -1,4 +1,3 @@
-import React from 'react'
 import profilePicture from './assets/romanyanke.jpg'
 import profilePicture2 from './assets/romanyanke@2x.jpg'
 import profilePicture3 from './assets/romanyanke@3x.jpg'

@@ -1,4 +1,3 @@
-import React from 'react'
 import Details from './Details'
 import Links from './Links'
 import Pencils from './Pencils'

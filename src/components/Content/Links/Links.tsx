@@ -1,4 +1,3 @@
-import React from 'react'
 import { icons } from './icons'
 import styles from './Links.module.css'
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { restorePencilMessage, storePencilMessage } from './Pencils.utils'
 import Details from '../Details'
 
