@@ -7,15 +7,15 @@ const Content = () => (
     <dl>
       <Details label="Handle" value={<Links />} />
       <Details
-        label="About"
+        label="Position"
         value={
           <>
-            Lead Frontend Engineer @<a href="https://www.simplinic.de/">simplinic</a>.
+            Lead Frontend Engineer @<a href="https://simplinic.de/">simplinic</a>
           </>
         }
       />
       <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
-      <Details label="Location" value="Saint Petersburg, Russia 🇷🇺" />
+      <Details label="Residence" value="Saint Petersburg, Russia 🇷🇺" />
       <Pencils />
     </dl>
   </article>

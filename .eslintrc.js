@@ -10,6 +10,7 @@ module.exports = {
   ],
   plugins: ['react', '@typescript-eslint', 'import', 'react-hooks'],
   rules: {
+    'no-extra-semi': 'off',
     'react/react-in-jsx-scope': 'off',
     'eol-last': ['error', 'always'],
     'react-hooks/rules-of-hooks': 'error',

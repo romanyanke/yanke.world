@@ -3,6 +3,6 @@ export interface SkyProps {
 }
 
 export enum Celestial {
-  Sun = '☀️',
+  Sun = '🌞',
   Moon = '🌛',
 }

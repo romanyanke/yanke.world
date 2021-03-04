@@ -7,12 +7,13 @@ import { useDarkMode } from './Sky/Sky.hooks'
 
 const Header = () => {
   const [darkMode, toggleDarkMode] = useDarkMode()
+  const name = 'Roman Yanke'
 
   return (
     <header className={styles.root} onClick={toggleDarkMode}>
-      <h1>Roman Yanke</h1>
+      <h1>{name}</h1>
       <img
-        alt="Roman Yanke"
+        alt={name}
         src={profilePicture}
         srcSet={`${profilePicture2} 2x, ${profilePicture3} 3x`}
       />

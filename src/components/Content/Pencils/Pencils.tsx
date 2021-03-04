@@ -8,20 +8,20 @@ const Pencils = () => {
   useEffect(() => storePencilMessage(description), [description])
 
   useEffect(() => {
-    const fetchData = async () => {
+    ;(async () => {
       const response = await fetch('https://romanyanke.github.io/pencilbox-static/description/')
       const { description } = await response.json()
+
       setDescription(description)
-    }
-    fetchData()
+    })()
   }, [])
 
   return (
     <Details
-      label="Hobby"
+      label="About"
       value={
         <>
-          I have <a href="https://pencil.yanke.ru/">{description}</a>.
+          I have <a href="https://pencil.yanke.ru/">{description}</a>
         </>
       }
     />

@@ -9,7 +9,7 @@
 .light {
   --background: #f7f7f7;
   --text: #2c2d30;
-  --caption: #747475;
+  --caption: #333;
   --link: #1264a3;
   --link-hover: #0b4c8c;
   --delimeter: #949494;
@@ -19,7 +19,7 @@
 .dark {
   --background: #282c35;
   --text: #ffffe0;
-  --caption: #919191;
+  --caption: #b7b7b7;
   --link: #e88030;
   --link-hover: #ff9c52;
   --delimeter: #808080;
@@ -33,7 +33,8 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.3;
+  font-size: 1.1rem;
+  line-height: 1.33;
   color: var(--text);
   background-color: #929498;
   background-color: var(--background);
