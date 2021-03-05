@@ -6,45 +6,37 @@
   height: var(--base-width);
   overflow: hidden;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   left: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .Sun,
 .Moon {
-  offset-path: path('M466 205.3c0-99-142.3-179.2-317.9-179.2s-317.9 80.2-317.9 179.2');
-  transition: all 0.6s ease-out;
-  offset-rotate: reverse;
   position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  cursor: pointer;
-}
-
-.Sun {
-  offset-distance: 100%;
-}
-.Moon {
-  offset-distance: 0%;
+  top: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  opacity: 0;
+  transform: translateX(-50%) rotate(0);
 }
 
 .day .Sun {
-  offset-distance: 50%;
+  transform: translateX(-50%);
   opacity: 1;
 }
+
 .day .Moon {
-  offset-distance: 0%;
-  opacity: 0;
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .night .Sun {
-  offset-distance: 100%;
-  opacity: 0;
+  transform: translateX(-50%) rotate(-90deg);
 }
+
 .night .Moon {
-  offset-distance: 50%;
+  transform: translateX(-50%);
   opacity: 1;
 }
