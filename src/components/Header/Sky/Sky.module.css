@@ -18,25 +18,67 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  transition: all 0.4s linear;
+  transition: all 0.25s linear;
+  transform: translateX(-50%);
   opacity: 0;
-  transform: translateX(-50%) rotate(0);
+  filter: brightness(0);
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
 .day .Sun {
-  transform: translateX(-50%);
-  opacity: 1;
+  animation-name: sunrise;
 }
-
 .day .Moon {
-  transform: translateX(-50%) rotate(90deg);
+  animation-name: dawn;
 }
-
 .night .Sun {
-  transform: translateX(-50%) rotate(-90deg);
+  animation-name: sunset;
+}
+.night .Moon {
+  animation-name: dusk;
 }
 
-.night .Moon {
-  transform: translateX(-50%);
-  opacity: 1;
+@keyframes sunrise {
+  from {
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+    filter: brightness(1);
+    opacity: 1;
+  }
+}
+@keyframes sunset {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+@keyframes dawn {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+@keyframes dusk {
+  from {
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+    filter: brightness(1);
+    opacity: 1;
+  }
 }
