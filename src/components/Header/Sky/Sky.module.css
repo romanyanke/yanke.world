@@ -1,6 +1,6 @@
 .root {
   user-select: none;
-  font-size: 2.6rem;
+  font-size: 1.2rem;
   position: absolute;
   width: var(--base-width);
   height: var(--base-width);
@@ -44,7 +44,7 @@
 
 @keyframes sunrise {
   from {
-    transform: translateX(-50%) rotate(-90deg);
+    transform: translateX(-50%) rotate(-120deg);
   }
   to {
     transform: translateX(-50%) rotate(0deg);
@@ -59,7 +59,7 @@
     opacity: 1;
   }
   to {
-    transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(120deg);
   }
 }
 @keyframes dawn {
@@ -69,12 +69,12 @@
     opacity: 1;
   }
   to {
-    transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(120deg);
   }
 }
 @keyframes dusk {
   from {
-    transform: translateX(-50%) rotate(-90deg);
+    transform: translateX(-50%) rotate(-120deg);
   }
   to {
     transform: translateX(-50%) rotate(0deg);
