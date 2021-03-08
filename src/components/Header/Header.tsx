@@ -10,21 +10,18 @@ const Header = () => {
   const [darkMode, toggleDarkMode] = useDarkMode()
   const daysPassed = useRef(0)
   const name = 'Roman Yanke'
+  const milestones = new Map()
+    .set(7, 'Whoa! A week passed!')
+    .set(30, 'Whoa! A month passed!')
+    .set(365, 'Whoa! A year passed! Please stop!')
 
   useEffect(() => {
-    if (darkMode) {
-      daysPassed.current++
-      if (daysPassed.current === 7) {
-        alert('Whoa! A week passed!')
-      }
-      if (daysPassed.current === 30) {
-        alert('Whoa! A month passed!')
-      }
-      if (daysPassed.current === 365) {
-        alert('Whoa! A year passed! Please stop!')
-      }
+    const milestone = milestones.get(daysPassed.current++ / 2)
+
+    if (milestone) {
+      alert(milestone)
     }
-  }, [darkMode])
+  }, [milestones])
 
   return (
     <header className={styles.root} onClick={toggleDarkMode}>

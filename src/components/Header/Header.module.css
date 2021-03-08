@@ -14,7 +14,8 @@
 }
 
 .root h1 {
-  color: #ffffe0;
+  color: #f1ebd8;
+  text-shadow: 0 0 6px #0c1817;
   position: absolute;
   z-index: 1;
   margin: 0;
