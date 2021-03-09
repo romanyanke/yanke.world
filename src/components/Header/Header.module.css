@@ -11,10 +11,11 @@
   display: block;
   width: var(--base-width);
   height: var(--base-width);
+  user-select: none;
 }
 
 .root h1 {
-  color: #f1ebd8;
+  color: #f7f7f7;
   text-shadow: 0 0 6px #0c1817;
   position: absolute;
   z-index: 1;
