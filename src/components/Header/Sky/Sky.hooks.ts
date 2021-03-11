@@ -9,24 +9,19 @@ export const useDarkMode = () => {
   const darkModeMediaQuery = matchMedia('(prefers-color-scheme: dark)')
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
   const [darkMode, setDarkMode] = useState(isDark)
-  const darkModeListener = useCallback(
-    ({ matches }: MediaQueryListEvent) => {
-      setDarkMode(matches)
-    },
-    [setDarkMode],
-  )
 
   const toggleDarkMode = useCallback(() => {
     setDarkMode(!darkMode)
   }, [setDarkMode, darkMode])
 
   useEffect(() => {
-    darkModeMediaQuery.addListener(darkModeListener)
+    const darkModeListener = ({ matches }: MediaQueryListEvent) => setDarkMode(matches)
+    darkModeMediaQuery.addEventListener('change', darkModeListener)
 
     return () => {
-      darkModeMediaQuery.removeListener(darkModeListener)
+      darkModeMediaQuery.removeEventListener('change', darkModeListener)
     }
-  }, [darkModeMediaQuery, darkModeListener])
+  }, [darkModeMediaQuery])
 
   useEffect(() => {
     if (!isSnapping) {
