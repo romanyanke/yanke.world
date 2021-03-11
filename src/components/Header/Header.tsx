@@ -7,7 +7,8 @@ import styles from './Header.module.css'
 import { useDarkMode } from './Sky/Sky.hooks'
 
 const Header = () => {
-  const [darkMode, toggleDarkMode] = useDarkMode()
+  const [darkMode, setDarkMode] = useDarkMode()
+
   const daysPassed = useRef(0)
   const name = 'Roman Yanke'
   const milestones = new Map()
@@ -24,7 +25,7 @@ const Header = () => {
   }, [milestones])
 
   return (
-    <header className={styles.root} onClick={toggleDarkMode}>
+    <header className={styles.root} onClick={() => setDarkMode(!darkMode)}>
       <h1>{name}</h1>
       <img
         alt={name}

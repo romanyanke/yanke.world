@@ -1,7 +1,8 @@
 import daynight from 'daynight'
-import { useCallback, useEffect, useState } from 'react'
+import { useMemo, useEffect, useState } from 'react'
 import { isSnapping } from '../../App/App.utils'
 import styles from '../../../index.module.css'
+import throttle from 'lodash/throttle'
 
 export const useDarkMode = () => {
   const day = daynight()
@@ -9,10 +10,9 @@ export const useDarkMode = () => {
   const darkModeMediaQuery = matchMedia('(prefers-color-scheme: dark)')
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
   const [darkMode, setDarkMode] = useState(isDark)
-
-  const toggleDarkMode = useCallback(() => {
-    setDarkMode(!darkMode)
-  }, [setDarkMode, darkMode])
+  const setDarkModeThrottled = useMemo(() => throttle((mode: boolean) => setDarkMode(mode), 500), [
+    setDarkMode,
+  ])
 
   useEffect(() => {
     const darkModeListener = ({ matches }: MediaQueryListEvent) => setDarkMode(matches)
@@ -31,5 +31,5 @@ export const useDarkMode = () => {
     }
   }, [darkMode])
 
-  return [darkMode, toggleDarkMode] as const
+  return [darkMode, setDarkModeThrottled] as const
 }
