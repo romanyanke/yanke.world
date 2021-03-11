@@ -25,15 +25,9 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     if (!isSnapping) {
-      document.body.classList.add(styles.transitions)
-
-      if (darkMode) {
-        document.body.classList.add(styles.dark)
-        document.body.classList.remove(styles.light)
-      } else {
-        document.body.classList.add(styles.light)
-        document.body.classList.remove(styles.dark)
-      }
+      document.body.classList.toggle(styles.transitions, true)
+      document.body.classList.toggle(styles.dark, darkMode)
+      document.body.classList.toggle(styles.light, !darkMode)
     }
   }, [darkMode])
 
