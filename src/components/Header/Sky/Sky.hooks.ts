@@ -5,8 +5,7 @@ import styles from '../../../index.module.css'
 import throttle from 'lodash/throttle'
 
 export const useDarkMode = () => {
-  const day = daynight()
-  const darkModeDaynight = day.error ? false : day.dark
+  const darkModeDaynight = daynight().dark
   const darkModeMediaQuery = matchMedia('(prefers-color-scheme: dark)')
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
   const [darkMode, setDarkMode] = useState(isDark)
