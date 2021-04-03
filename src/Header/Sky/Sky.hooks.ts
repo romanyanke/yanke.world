@@ -1,7 +1,7 @@
 import daynight from 'daynight'
 import { useMemo, useEffect, useState } from 'react'
 import { isSnapping } from '../../App/App.utils'
-import styles from '../../../index.module.css'
+import styles from '../../index.module.css'
 import throttle from 'lodash/throttle'
 
 export const useDarkMode = () => {

@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import App from './App'
 
 const rootElement = document.getElementById('romanyanke')
 
