@@ -8,24 +8,24 @@
 }
 
 .link {
-  flex: 1 1 auto;
+  flex: 1;
   text-align: center;
   transition: all var(--transition-options);
+  opacity: 0.5;
 }
 
 .link svg {
   height: 14px;
-  opacity: 0.5;
 }
 .link path {
   fill: var(--text);
-  transition: fill var(--transition-options);
 }
 .link:hover,
 .link:focus {
   transform: translateY(-2px);
+  opacity: 1;
 }
-.link:hover svg,
-.link:focus {
-  opacity: 0.8;
+
+.link:hover path {
+  fill: var(--link-hover);
 }

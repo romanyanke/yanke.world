@@ -12,7 +12,7 @@ const Links = () => {
 
   return (
     <div className={styles.links}>
-      <div className={styles.handle}>{handle}</div>
+      <span className={styles.handle}>{handle}</span>
       {list.map(({ url, icon: Icon, title }) => (
         <a href={url} key={url} className={styles.link} title={title}>
           <Icon />
