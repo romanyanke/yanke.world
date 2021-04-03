@@ -9,7 +9,7 @@ const Content = () => (
       label="Position"
       value={
         <>
-          Lead Frontend Engineer @<a href="https://simplinic.de/">simplinic</a>
+          Lead Frontend Engineer at <a href="https://simplinic.de/">simplinic</a>
         </>
       }
     />
