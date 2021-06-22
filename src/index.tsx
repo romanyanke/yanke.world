@@ -1,12 +1,7 @@
-import ReactDOM from 'react-dom'
+import { render, hydrate } from 'react-dom'
 import App from './App'
 
-const rootElement = document.getElementById('romanyanke')
+const root = document.getElementById('romanyanke')
+const action = root?.hasChildNodes() ? hydrate : render
 
-if (rootElement) {
-  if (rootElement.hasChildNodes()) {
-    ReactDOM.hydrate(<App />, rootElement)
-  } else {
-    ReactDOM.render(<App />, rootElement)
-  }
-}
+action(<App />, root)
