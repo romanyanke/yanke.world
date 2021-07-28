@@ -3,12 +3,13 @@ import styles from './Links.module.css'
 
 const Links = () => {
   const handle = 'romanyanke'
+  const urlize = (domain: string) => `https://${domain}/${handle}`
   const list = [
-    { url: `https://twitter.com/${handle}`, icon: icons.twitter, title: 'Twitter' },
-    { url: `https://instagram.com/${handle}`, icon: icons.instagram, title: 'Instagram' },
-    { url: `https://t.me/${handle}`, icon: icons.telegram, title: 'Telegram' },
-    { url: `https://github.com/${handle}`, icon: icons.github, title: 'GitHub' },
-    { url: `https://linkedin.com/in/${handle}`, icon: icons.linkedin, title: 'LinkedIn' },
+    { url: urlize('twitter.com'), icon: icons.twitter, title: 'Twitter' },
+    { url: urlize('instagram.com'), icon: icons.instagram, title: 'Instagram' },
+    { url: urlize('t.me'), icon: icons.telegram, title: 'Telegram' },
+    { url: urlize('github.com'), icon: icons.github, title: 'GitHub' },
+    { url: urlize('linkedin.com/in'), icon: icons.linkedin, title: 'LinkedIn' },
   ]
 
   return (
