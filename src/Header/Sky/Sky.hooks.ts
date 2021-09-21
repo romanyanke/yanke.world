@@ -25,11 +25,18 @@ export const useDarkMode = () => {
   }, [darkModeMediaQuery])
 
   useEffect(() => {
-    if (!isSnapping) {
-      document.body.classList.toggle(styles.transitions, true)
-      document.body.classList.toggle(styles.dark, darkMode)
-      document.body.classList.toggle(styles.light, !darkMode)
+    if (isSnapping) {
+      return
     }
+    document.body.classList.toggle(styles.transitions, true)
+    document.body.classList.toggle(styles.dark, darkMode)
+    document.body.classList.toggle(styles.light, !darkMode)
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute(
+        'content',
+        getComputedStyle(document.body).getPropertyValue('--background'),
+      )
   }, [darkMode])
 
   return [darkMode, setDarkModeThrottled] as const
