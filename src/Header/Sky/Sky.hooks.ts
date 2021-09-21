@@ -9,12 +9,14 @@ export const useDarkMode = () => {
   const darkModeMediaQuery = matchMedia('(prefers-color-scheme: dark)')
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
   const [darkMode, setDarkMode] = useState(isDark)
-  const setDarkModeThrottled = useMemo(() => throttle((mode: boolean) => setDarkMode(mode), 500), [
-    setDarkMode,
-  ])
+  const setDarkModeThrottled = useMemo(
+    () => throttle((mode: boolean) => setDarkMode(mode), 500),
+    [setDarkMode],
+  )
 
   useEffect(() => {
-    const darkModeListener = ({ matches }: MediaQueryListEvent) => setDarkMode(matches)
+    const darkModeListener = ({ matches }: MediaQueryListEvent) =>
+      setDarkMode(matches)
     darkModeMediaQuery.addEventListener('change', darkModeListener)
 
     return () => {

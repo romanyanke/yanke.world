@@ -9,7 +9,9 @@ const Pencils = () => {
 
   useEffect(() => {
     ;(async () => {
-      const response = await fetch('https://romanyanke.github.io/pencilbox-static/description/')
+      const response = await fetch(
+        'https://romanyanke.github.io/pencilbox-static/description/',
+      )
       const { description } = await response.json()
 
       setDescription(description)

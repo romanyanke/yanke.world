@@ -9,13 +9,17 @@ const Content = () => (
       label="Position"
       value={
         <>
-          Lead Frontend Engineer at <a href="https://simplinic.de/">simplinic</a>
+          Lead Frontend Engineer at{' '}
+          <a href="https://simplinic.de/">simplinic</a>
         </>
       }
     />
     <Pencils />
     <Details label="Residence" value="Saint Petersburg, Russia 🇷🇺" />
-    <Details label="Email" value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>} />
+    <Details
+      label="Email"
+      value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>}
+    />
   </dl>
 )
 
