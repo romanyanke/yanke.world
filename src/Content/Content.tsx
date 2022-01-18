@@ -14,7 +14,7 @@ const Content = () => (
         </>
       }
     />
-    <Pencils />
+    <Details label="About" value={<Pencils />} />
     <Details label="Residence" value="Saint Petersburg, Russia 🇷🇺" />
     <Details
       label="Email"

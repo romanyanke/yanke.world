@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { restorePencilMessage, storePencilMessage } from './Pencils.utils'
-import Details from '../Details'
 
 const Pencils = () => {
   const [description, setDescription] = useState(restorePencilMessage())
@@ -19,14 +18,9 @@ const Pencils = () => {
   }, [])
 
   return (
-    <Details
-      label="About"
-      value={
-        <>
-          I have <a href="https://pencil.yanke.ru/">{description}</a>
-        </>
-      }
-    />
+    <>
+      I have <a href="https://pencil.yanke.ru/">{description}</a>
+    </>
   )
 }
 
