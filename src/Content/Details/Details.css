@@ -16,21 +16,21 @@ dd:after {
   height: 1px;
   margin: 0.8rem 0.2rem;
   transition: background-image var(--transition-options);
-  background-image: linear-gradient(var(--delimeter), var(--delimeter));
+  background-image: linear-gradient(var(--delimiter), var(--delimiter));
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
   dd:after {
-    background-image: linear-gradient(var(--delimeter) 50%, transparent 51%);
+    background-image: linear-gradient(var(--delimiter) 50%, transparent 51%);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
   dd:after {
-    background-image: linear-gradient(var(--delimeter) 33%, transparent 34%);
+    background-image: linear-gradient(var(--delimiter) 33%, transparent 34%);
   }
 }
 @media (-webkit-min-device-pixel-ratio: 4) {
   dd:after {
-    background-image: linear-gradient(var(--delimeter) 25%, transparent 26%);
+    background-image: linear-gradient(var(--delimiter) 25%, transparent 26%);
   }
 }
