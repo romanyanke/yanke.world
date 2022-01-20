@@ -28,6 +28,7 @@ const Header = () => {
     <header className={styles.root} onClick={() => setDarkMode(!darkMode)}>
       <h1>{name}</h1>
       <img
+        title={name}
         alt={name}
         src={profilePicture}
         srcSet={`${profilePicture2} 2x, ${profilePicture3} 3x`}

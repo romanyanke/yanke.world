@@ -1,6 +1,11 @@
-import { DetailsProps } from './Details.interface'
+import { ReactNode } from 'react'
 
-const Details = ({ label, value }: DetailsProps) => (
+export interface Props {
+  label: ReactNode
+  value: ReactNode
+}
+
+const Details = ({ label, value }: Props) => (
   <>
     <dt>{label}</dt>
     <dd>{value}</dd>

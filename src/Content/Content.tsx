@@ -1,25 +1,24 @@
+import { ReactNode } from 'react'
 import Details from './Details'
 import Links from './Links'
 import Pencils from './Pencils'
+import Position from './Position'
+import Email from './Email'
+import Residence from './Residence'
+
+const info: [string, ReactNode][] = [
+  ['Handle', <Links />],
+  ['Position', <Position />],
+  ['About', <Pencils />],
+  ['Residence', <Residence />],
+  ['Email', <Email />],
+]
 
 const Content = () => (
   <dl>
-    <Details label="Handle" value={<Links />} />
-    <Details
-      label="Position"
-      value={
-        <>
-          Lead Frontend Engineer at{' '}
-          <a href="https://simplinic.de/">simplinic</a>
-        </>
-      }
-    />
-    <Details label="About" value={<Pencils />} />
-    <Details label="Residence" value="Saint Petersburg, Russia 🇷🇺" />
-    <Details
-      label="Email"
-      value={<a href="mailto:roman@yanke.ru">roman@yanke.ru</a>}
-    />
+    {info.map(([label, value]) => (
+      <Details label={label} value={value} key={label} />
+    ))}
   </dl>
 )
 

@@ -1,21 +1,34 @@
 import { useState, useEffect } from 'react'
-import styles from './Sky.module.css'
-import { SkyProps, Celestial } from './Sky.interface'
+import classes from './Sky.module.css'
 import { isSnapping } from '../../App/App.utils'
 
-const Sky = ({ night: darkMode }: SkyProps) => {
+interface Props {
+  night: boolean
+}
+
+enum Celestial {
+  Sun = '🌞',
+  Moon = '🌛',
+}
+
+const Sky = ({ night: darkMode }: Props) => {
   const [mode, setMode] = useState('')
 
   useEffect(() => {
     if (!isSnapping) {
-      setMode(darkMode ? styles.night : styles.day)
+      setMode(darkMode ? classes.night : classes.day)
     }
   }, [darkMode])
 
   return (
-    <div aria-hidden className={`${styles.root} ${mode}`}>
-      <span className={styles.Sun}>{Celestial.Sun}</span>
-      <span className={styles.Moon}>{Celestial.Moon}</span>
+    <div aria-hidden className={`${classes.root} ${mode}`}>
+      {Object.entries(Celestial).map(([name, presentation]) => {
+        return (
+          <span key={name} className={classes[name]}>
+            {presentation}
+          </span>
+        )
+      })}
     </div>
   )
 }
