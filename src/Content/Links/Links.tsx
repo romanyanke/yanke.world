@@ -4,19 +4,18 @@ import styles from './Links.module.css'
 
 const handle = 'romanyanke'
 const format = (domain: string) => `https://${domain}/${handle}`
-const list: [string, string, FunctionComponent][] = [
-  ['Twitter', format('twitter.com'), icons.twitter],
-  ['Instagram', format('instagram.com'), icons.instagram],
-  ['Telegram', format('t.me'), icons.telegram],
-  ['GitHub', format('github.com'), icons.github],
-  ['LinkedIn', format('linkedin.com/in'), icons.linkedin],
+const list: [FunctionComponent, string, string][] = [
+  [icons.twitter, 'Twitter', 'twitter.com'],
+  [icons.instagram, 'Instagram', 'instagram.com'],
+  [icons.telegram, 'Telegram', 't.me'],
+  [icons.github, 'GitHub', 'github.com'],
+  [icons.linkedin, 'LinkedIn', 'linkedin.com/in'],
 ]
-
 const Links = () => (
   <div className={styles.root}>
     <span>{handle}</span>
-    {list.map(([title, url, Icon]) => (
-      <a href={url} key={url} className={styles.link} title={title}>
+    {list.map(([Icon, title, url]) => (
+      <a href={format(url)} key={url} className={styles.link} title={title}>
         <Icon />
       </a>
     ))}

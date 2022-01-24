@@ -1,1 +1,1 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My homepage [yanke.ru](https://yanke.ru).

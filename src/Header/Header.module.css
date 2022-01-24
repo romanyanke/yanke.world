@@ -1,17 +1,21 @@
 .root {
   position: relative;
-  /* path from  src/Header/assets/squircle.svg */
-  clip-path: path(
-    'M150 300c65.7 0 102.3 0 126.1-23.9C300 252.3 300 215.7 300 150s0-102.3-23.9-126.1C252.3 0 215.7 0 150 0S47.7 0 23.9 23.9 0 84.3 0 150s0 102.3 23.9 126.1C47.7 300 84.3 300 150 300z'
-  );
+  -webkit-tap-highlight-color: transparent;
+}
+.root svg {
+  position: absolute;
+  pointer-events: none;
+}
+.root > * {
+  margin: auto;
 }
 
 .root img {
   filter: var(--image-filter);
   display: block;
-  width: var(--base-width);
-  height: var(--base-width);
   user-select: none;
+  clip-path: url(#squircle-mask);
+  height: var(--base-width);
 }
 
 .root h1 {

@@ -10,7 +10,7 @@ export const useDarkMode = () => {
   const isDark = darkModeDaynight || darkModeMediaQuery.matches
   const [darkMode, setDarkMode] = useState(isDark)
   const setDarkModeThrottled = useMemo(
-    () => throttle((mode: boolean) => setDarkMode(mode), 500),
+    () => throttle(setDarkMode, 600),
     [setDarkMode],
   )
 
