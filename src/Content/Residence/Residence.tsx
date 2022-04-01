@@ -1,8 +1,8 @@
 const Residence = () => (
   <>
-    Saint Petersburg, Russia{' '}
-    <span role="img" aria-label="Flag of Russia">
-      🇷🇺
+    İstanbul, Turkey{' '}
+    <span role="img" aria-label="Flag of Turkey">
+      🇹🇷
     </span>
   </>
 )
