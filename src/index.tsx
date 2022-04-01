@@ -1,7 +1,12 @@
-import { render, hydrate } from 'react-dom'
 import App from './App'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 
-const root = document.getElementById('romanyanke')
-const action = root?.hasChildNodes() ? hydrate : render
+const container = document.getElementById('romanyanke')
 
-action(<App />, root)
+if (container) {
+  if (container.hasChildNodes()) {
+    hydrateRoot(container, <App />)
+  } else {
+    createRoot(container).render(<App />)
+  }
+}
