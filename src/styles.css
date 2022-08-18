@@ -1,4 +1,265 @@
-h1 {
-  color: hotpink;
-  font-family: cursive;
+:root {
+  --base-width: 300px;
+}
+
+.transitions {
+  --transition-options: ease-out 0.15s;
+}
+
+.day {
+  --background: #f1eded;
+  --text: #2c2d30;
+  --caption: #333;
+  --link: #1264a3;
+  --link-hover: #0b4c8c;
+  --delimiter: #949494;
+  --image-filter: none;
+}
+
+.night {
+  --background: #150708;
+  --text: #ffffe0;
+  --caption: #b7b7b7;
+  --link: #e88030;
+  --link-hover: #ff9c52;
+  --delimiter: #808080;
+  --image-filter: brightness(0.85);
+}
+
+body {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem;
+  line-height: 1.33;
+  color: var(--text);
+  background-color: #929498;
+  background-color: var(--background);
+  transition: all var(--transition-options);
+}
+
+@media (max-width: 316px) {
+  body {
+    margin-top: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+  transition: color var(--transition-options);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+body {
+  width: var(--base-width);
+  margin: auto;
+  padding: 0 0.5rem;
+}
+
+header {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header svg {
+  position: absolute;
+  pointer-events: none;
+}
+
+header img {
+  filter: var(--image-filter);
+  display: block;
+  user-select: none;
+  clip-path: url(#squircle-mask);
+  height: var(--base-width);
+}
+
+header h1 {
+  color: #f7f7f7;
+  text-shadow: 0 0 6px #0c1817;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  line-height: 2.5rem;
+  bottom: 0;
+  left: 0;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  right: 0;
+  text-align: center;
+}
+
+.sky {
+  --angle: 170deg;
+  --day-animation: 0.6s;
+
+  user-select: none;
+  font-size: 1.2rem;
+  position: absolute;
+  width: var(--base-width);
+  height: var(--base-width);
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.moon,
+.sun {
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  transition: all 0.25s linear;
+  transform: translateX(-50%);
+  animation-duration: var(--day-animation);
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+.day .sun {
+  animation-name: sunrise;
+}
+.day .moon {
+  animation-name: dawn;
+}
+.night .sun {
+  animation-name: sunset;
+}
+.night .moon {
+  animation-name: dusk;
+}
+
+@keyframes sunrise {
+  from {
+    transform: translateX(-50%)
+      rotate(calc(-1 * var(--angle)));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes sunset {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) rotate(var(--angle));
+    opacity: 0;
+  }
+}
+@keyframes dawn {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) rotate(var(--angle));
+    opacity: 0;
+  }
+}
+@keyframes dusk {
+  from {
+    transform: translateX(-50%)
+      rotate(calc(-1 * var(--angle)));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+dt {
+  color: var(--caption);
+  font-size: 0.87rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+dd {
+  margin: 0;
+}
+
+dd:after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0.8rem 0.2rem;
+  transition: background-image var(--transition-options);
+  background-image: linear-gradient(
+    var(--delimiter),
+    var(--delimiter)
+  );
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 50%,
+      transparent 51%
+    );
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 33%,
+      transparent 34%
+    );
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 4) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 25%,
+      transparent 26%
+    );
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+.links span {
+  flex: 0;
+}
+.links a {
+  flex: 1;
+  text-align: center;
+  transition: all var(--transition-options);
+  opacity: 0.5;
+}
+.links svg {
+  height: 14px;
+}
+
+.links a path {
+  fill: var(--text);
+}
+.links a:hover,
+.links a:focus {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.links a:hover path {
+  fill: var(--link-hover);
 }
