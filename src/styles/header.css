@@ -1,0 +1,32 @@
+header {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header svg {
+  position: absolute;
+  pointer-events: none;
+}
+
+header img {
+  filter: var(--image-filter);
+  display: block;
+  user-select: none;
+  clip-path: url(#squircle-mask);
+  height: var(--base-width);
+}
+
+header h1 {
+  color: #f7f7f7;
+  text-shadow: 0 0 6px #0c1817;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  line-height: 2.5rem;
+  bottom: 0;
+  left: 0;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  right: 0;
+  text-align: center;
+}

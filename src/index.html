@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>My First Parcel App</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script type="module" src="app.ts"></script>
+  <title>Roman Yanke</title>
+  <style>
+    @import "app.css";
+  </style>
 </head>
 
 <body>
@@ -16,22 +17,22 @@
     <div class="sky day" aria-hidden="true">
       <span class="sun">🌞</span><span class="moon">🌛</span>
     </div>
-    <icon src="assets/squircle.svg" />
+    <inline svg="assets/squircle.svg" />
   </header>
   <dl>
     <dt>Handle</dt>
     <dd>
       <div class="links">
         <span>romanyanke</span><a href="https://twitter.com/romanyanke" title="Twitter">
-          <icon src="assets/twitter.svg" />
+          <inline svg="assets/twitter.svg" />
         </a><a href="https://instagram.com/romanyanke" title="Instagram">
-          <icon src="assets/instagram.svg" />
+          <inline svg="assets/instagram.svg" />
         </a><a href="https://t.me/romanyanke" title="Telegram">
-          <icon src="assets/telegram.svg" />
+          <inline svg="assets/telegram.svg" />
         </a><a href="https://github.com/romanyanke" title="GitHub">
-          <icon src="assets/github.svg" />
+          <inline svg="assets/github.svg" />
         </a><a href="https://linkedin.com/in/romanyanke" title="LinkedIn">
-          <icon src="assets/linkedin.svg" />
+          <inline svg="assets/linkedin.svg" />
         </a>
       </div>
     </dd>
@@ -55,9 +56,9 @@
       <a href="mailto:roman@yanke.world" tabindex="1">roman@yanke.world</a>
     </dd>
   </dl>
-
-
-
+  <script type="module">
+    import value from "./app.ts";
+  </script>
 </body>
 
 </html>

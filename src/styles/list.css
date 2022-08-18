@@ -1,0 +1,47 @@
+dt {
+  color: var(--caption);
+  font-size: 0.87rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+dd {
+  margin: 0;
+}
+
+dd:after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0.8rem 0.2rem;
+  transition: background-image var(--transition-options);
+  background-image: linear-gradient(
+    var(--delimiter),
+    var(--delimiter)
+  );
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 50%,
+      transparent 51%
+    );
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 33%,
+      transparent 34%
+    );
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 4) {
+  dd:after {
+    background-image: linear-gradient(
+      var(--delimiter) 25%,
+      transparent 26%
+    );
+  }
+}
