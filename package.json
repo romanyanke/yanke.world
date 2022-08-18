@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
     "parcel": "^2.7.0",
     "posthtml-inline-svg": "^0.2.0",
     "prettier": "^2.7.1"
