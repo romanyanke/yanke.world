@@ -1,20 +1,23 @@
-const header = document.getElementsByTagName('header')[0]
+import { toggleTheme } from './theme'
 
-let cooldown = 0
-const animationDuration =
-  parseFloat(
-    getComputedStyle(
-      document.getElementsByClassName('moon')[0],
-    ).animationDuration,
-  ) * 1000
+const header = document.querySelector('header')
 
-header.addEventListener('click', () => {
-  const now = performance.now()
-  if (cooldown + animationDuration > now) {
-    return
-  }
+if (header) {
+  let cooldown = 0
+  const animationDuration =
+    parseFloat(
+      getComputedStyle(document.body).getPropertyValue(
+        '--day-length',
+      ),
+    ) * 1000
 
-  cooldown = now
-  document.body.classList.toggle('day')
-  document.body.classList.toggle('night')
-})
+  header.addEventListener('click', () => {
+    const now = performance.now()
+    if (cooldown + animationDuration > now) {
+      return
+    }
+
+    toggleTheme()
+    cooldown = now
+  })
+}

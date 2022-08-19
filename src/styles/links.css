@@ -2,15 +2,18 @@
   display: flex;
   align-items: center;
 }
+
 .links span {
   flex: 0;
 }
+
 .links a {
   flex: 1;
   text-align: center;
   transition: all var(--transition-options);
   opacity: 0.5;
 }
+
 .links svg {
   height: 14px;
 }
@@ -18,11 +21,13 @@
 .links a path {
   fill: var(--text);
 }
+
 .links a:hover,
 .links a:focus {
   transform: translateY(-2px);
   opacity: 1;
 }
+
 .links a:hover path {
   fill: var(--link-hover);
 }

@@ -1,7 +1,7 @@
 {
   "name": "yanke.world",
   "version": "1.0.0",
-  "description": "",
+  "description": "My homepage",
   "source": "src/index.html",
   "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
