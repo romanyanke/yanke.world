@@ -6,7 +6,7 @@
   "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel -p 3000",
-    "build": "parcel build",
+    "build": "parcel build && cp -r public/. dist",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
