@@ -1,1 +1,1 @@
-{"name":"Roman Yanke","icons":[{"src":"/assets/logo192.png","type":"image/png","sizes":"192x192"},{"src":"/logo512.ab1377f4.png","type":"image/png","sizes":"512x512"}],"start_url":"index.html","display":"standalone","theme_color":"#ffffe0","background_color":"#282c35"}
+{"name":"Roman Yanke","icons":[{"src":"/assets/logo192.png","type":"image/png","sizes":"192x192"},{"src":"/logo512.ab1377f4.png","type":"image/png","sizes":"512x512","purpose":"maskable"}],"start_url":"https://yanke.world/","display":"standalone","theme_color":"#ffffe0","background_color":"#282c35"}
