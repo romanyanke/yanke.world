@@ -1,19 +1,26 @@
 {
-  "name": "Roman Yanke",
+  "name": "Roman Yanke Profile",
+  "short_name": "Roman Yanke",
+  "description": "Hi, my name is Roman Yanke.",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "fullscreen",
+  "theme_color": "#ffffe0",
+  "background_color": "#282c35",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
       "src": "assets/logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
-  ],
-  "start_url": "index.html",
-  "display": "standalone",
-  "theme_color": "#ffffe0",
-  "background_color": "#282c35"
+  ]
 }
