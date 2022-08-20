@@ -1,0 +1,2 @@
+!function(){let a=[],e="";a=["/index.html","/assets/logo192.png","/favicon.c53c41e7.ico","/romanyanke.19642c4e.jpg","/romanyanke@2x.a9c4d719.jpg","/romanyanke@3x.b6b46f0c.jpg","/manifest.webmanifest","/logo512.ab1377f4.png"],e="9a0383eb",addEventListener("install",(n=>n.waitUntil(async function(){const n=await caches.open(e);await n.addAll(a)}()))),addEventListener("activate",(a=>a.waitUntil(async function(){const a=await caches.keys();await Promise.all(a.map((a=>a!==e&&caches.delete(a))))}())))}();
+//# sourceMappingURL=offline.js.map
