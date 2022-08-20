@@ -22,8 +22,11 @@
 <body>
   <header>
     <h1>Roman Yanke</h1>
-    <img alt="Profile" src="assets/romanyanke.jpg" srcset="assets/romanyanke@2x.jpg 2x, assets/romanyanke@3x.jpg 3x"
-      title="Roman Yanke" />
+    <picture title="Roman Yanke">
+      <source srcset="assets/romanyanke.webp, assets/romanyanke@2x.webp 2x, assets/romanyanke@3x.webp 3x"
+        type="image/webp">
+      <img src="assets/romanyanke.jpg" alt="Profile picture">
+    </picture>
     <div class="sky day" aria-hidden="true">
       <span class="sun">🌞</span>
       <span class="moon">🌛</span>

@@ -6,9 +6,11 @@ header {
 header svg {
   position: absolute;
   pointer-events: none;
+  z-index: -1;
+  top: 0;
 }
 
-header img {
+picture {
   filter: var(--image-filter);
   display: block;
   user-select: none;
