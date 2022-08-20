@@ -13,6 +13,7 @@
   left: 0;
   text-align: center;
   cursor: pointer;
+  transform: translateZ(0);
 }
 
 .moon,
