@@ -1,4 +1,5 @@
 import daynight from 'daynight'
+import { timeGoes } from './calendar'
 
 const isDark = daynight().dark
 
@@ -16,6 +17,7 @@ export const toggleTheme = () => {
   document.body.classList.toggle(Theme.light)
   document.body.classList.toggle(Theme.dark)
   updateMeta()
+  timeGoes()
 }
 
 function updateMeta() {
