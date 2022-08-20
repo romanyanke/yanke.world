@@ -1,11 +1,11 @@
 import daynight from 'daynight'
 
+const isDark = daynight().dark
+
 const enum Theme {
   light = 'day',
   dark = 'night',
 }
-
-const isDark = daynight().dark
 
 document.body.classList.add(
   isDark ? Theme.dark : Theme.light,
@@ -22,6 +22,7 @@ function updateMeta() {
   const color = getComputedStyle(
     document.body,
   ).getPropertyValue('--background')
+
   document
     .querySelector('meta[name="theme-color"]')
     ?.setAttribute('content', color)
