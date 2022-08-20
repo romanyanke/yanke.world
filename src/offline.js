@@ -16,8 +16,16 @@ addEventListener('activate', e => e.waitUntil(activate()))
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(
-    fetch(event.request).catch(function () {
-      return caches.match(event.request)
+    caches.open(version).then(cache => {
+      return fetch(event.request.url)
+        .then(fetchedResponse => {
+          cache.put(event.request, fetchedResponse.clone())
+
+          return fetchedResponse
+        })
+        .catch(() => {
+          return cache.match(event.request.url)
+        })
     }),
   )
 })
