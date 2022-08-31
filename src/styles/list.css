@@ -21,6 +21,10 @@ dd:after {
   );
 }
 
+dd:last-of-type:after {
+  content: none;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2) {
   dd:after {
     background-image: linear-gradient(
