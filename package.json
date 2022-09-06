@@ -22,6 +22,6 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-    "daynight": "^3.2.1"
+    "daynight": "^3.3.0"
   }
 }
