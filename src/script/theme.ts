@@ -1,21 +1,18 @@
-import daynight from 'daynight'
+import daynight, { DaynightTheme } from 'daynight'
 import { timeGoes } from './calendar'
 
-const isDark = daynight().dark
-
-const enum Theme {
-  light = 'day',
-  dark = 'night',
+const { theme } = daynight()
+const themes: Record<DaynightTheme, DaynightTheme> = {
+  day: 'day',
+  night: 'night',
 }
 
-document.body.classList.add(
-  isDark ? Theme.dark : Theme.light,
-)
+document.body.classList.add(themes[theme])
 updateMeta()
 
 export const toggleTheme = () => {
-  document.body.classList.toggle(Theme.light)
-  document.body.classList.toggle(Theme.dark)
+  document.body.classList.toggle(themes.day)
+  document.body.classList.toggle(themes.night)
   updateMeta()
   timeGoes()
 }
