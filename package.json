@@ -13,13 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.7.0",
-    "@parcel/service-worker": "^2.7.0",
-    "@parcel/transformer-webmanifest": "^2.7.0",
+    "@parcel/packager-raw-url": "^2.8.2",
+    "@parcel/service-worker": "^2.8.2",
+    "@parcel/transformer-webmanifest": "^2.8.2",
     "gh-pages": "^4.0.0",
-    "parcel": "^2.7.0",
+    "parcel": "^2.8.2",
     "posthtml-inline-svg": "^0.2.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.1"
   },
   "dependencies": {
     "daynight": "^3.3.0"
