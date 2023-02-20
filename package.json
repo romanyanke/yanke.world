@@ -13,13 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.8.2",
-    "@parcel/service-worker": "^2.8.2",
-    "@parcel/transformer-webmanifest": "^2.8.2",
-    "gh-pages": "^4.0.0",
-    "parcel": "^2.8.2",
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/service-worker": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3",
     "posthtml-inline-svg": "^0.2.0",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.7"
   },
   "dependencies": {
     "daynight": "^3.3.0"
