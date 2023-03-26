@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
@@ -15,7 +14,7 @@
   <link rel="icon" href="assets/favicon.ico" />
   <title>Roman Yanke</title>
   <style>
-    @import 'app.css';
+    @import './app.css';
   </style>
 </head>
 
@@ -23,11 +22,9 @@
   <header>
     <h1>Roman Yanke</h1>
     <picture title="Roman Yanke">
-      <source srcset="
-            assets/romanyanke.webp,
-            assets/romanyanke@2x.webp 2x,
-            assets/romanyanke@3x.webp 3x
-          " type="image/webp" />
+      <source
+        srcset="assets/romanyanke.webp, assets/romanyanke@2x.webp 2x, assets/romanyanke@3x.webp 3x"
+        type="image/webp" />
       <img src="assets/romanyanke.jpg" alt="Profile picture" />
     </picture>
     <div class="sky" aria-hidden="true">
@@ -36,6 +33,7 @@
     </div>
     <inline svg="assets/squircle.svg" />
   </header>
+
   <dl>
     <dt>Handle</dt>
     <dd>
@@ -60,26 +58,24 @@
     </dd>
     <dt>Position</dt>
     <dd>
-      Lead Frontend Engineer at
-      <a href="https://www.simplinic.de">simplinic</a>
+      Lead Frontend Engineer at <a href="https://www.simplinic.de">simplinic</a>
     </dd>
     <dt>About</dt>
     <dd>
-      I have
-      <a href="https://pencil.yanke.world/" id="pencils">a collection of pencils</a>
+      I have <a href="https://pencil.yanke.world/" id="pencils">a collection of pencils</a>
     </dd>
     <dt>Residence</dt>
     <dd>
-      Berlin, Germany
-      <span aria-label="Flag of Germany" role="img">🇩🇪</span>
+      Berlin, Germany <span aria-label="Flag of Germany" role="img">🇩🇪</span>
     </dd>
     <dt>Email</dt>
     <dd>
       <a href="mailto:roman@yanke.world">roman@yanke.world</a>
     </dd>
   </dl>
+
   <script type="module">
-    import value from './app.ts'
+    import './app.ts'
   </script>
 </body>
 
