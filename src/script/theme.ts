@@ -1,7 +1,14 @@
 import daynight, { DaynightTheme } from 'daynight'
 import { timeGoes } from './calendar'
 
-const { theme } = daynight()
+let theme: DaynightTheme
+
+try {
+  theme = daynight().theme
+} catch (e) {
+  theme = 'day'
+}
+
 const themes: Record<DaynightTheme, DaynightTheme> = {
   day: 'day',
   night: 'night',
