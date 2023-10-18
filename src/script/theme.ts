@@ -6,7 +6,15 @@ let theme: DaynightTheme
 try {
   theme = daynight().theme
 } catch (e) {
-  theme = 'day'
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
+  ) {
+    theme = 'night'
+  } else {
+    theme = 'day'
+  }
 }
 
 const themes: Record<DaynightTheme, DaynightTheme> = {
