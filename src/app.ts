@@ -1,4 +1,5 @@
 import './script/theme'
+import './script/photo'
 import './script/switch-theme'
 import './script/pencil'
 

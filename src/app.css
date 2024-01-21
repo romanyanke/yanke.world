@@ -62,3 +62,23 @@ a:hover {
   text-decoration: underline;
   color: var(--link-hover);
 }
+
+#show-photo {
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+#show-photo::before {
+  content: '📷 ';
+}
+#show-photo:active::before {
+  content: '📸 ';
+}
+#photo-frame iframe {
+  border: none;
+  filter: var(--image-filter);
+  margin: 0;
+  width: var(--base-width);
+  height: var(--base-width);
+  clip-path: url(#squircle-mask);
+  transition: opacity var(--transition-options);
+}
