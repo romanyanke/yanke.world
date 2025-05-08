@@ -2,22 +2,18 @@
   "name": "yanke.world",
   "version": "1.0.0",
   "description": "My homepage",
-  "source": "src/index.html",
   "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
-    "start": "rm -rf dist && parcel -p 3000",
-    "build": "rm -rf dist && parcel build --no-cache && cp -r public/. dist"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postbuild": "npx html-minifier-terser dist/index.html --output dist/index.html --collapse-whitespace --remove-comments --minify-css true --minify-js true"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.12.0",
-    "@parcel/service-worker": "^2.12.0",
-    "@parcel/transformer-webmanifest": "^2.12.0",
-    "parcel": "^2.12.0",
-    "posthtml-inline-svg": "^0.2.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.5.3",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^1.0.0"
   },
   "dependencies": {
     "daynight": "^4.0.1"
