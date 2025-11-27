@@ -16,6 +16,14 @@ picture {
   user-select: none;
   clip-path: url(#squircle-mask);
   height: var(--base-width);
+  width: var(--base-width);
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 header h1 {
