@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [inlineSvgPlugin(), VitePWA()],
   build: {
-    minify: 'esbuild',
+    minify: true,
     assetsInlineLimit: 0, // Ensures all assets are inlined
   },
   server: { allowedHosts: ['ypro.local'], port: 3000 },
