@@ -1,7 +1,7 @@
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
-import { readFileSync } from 'fs'
-import path from 'path'
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
 
 export default defineConfig({
   plugins: [inlineSvgPlugin(), VitePWA()],
@@ -30,7 +30,10 @@ function inlineSvgPlugin() {
       return html.replace(
         /<inline svg="(.*?)" \/>/g,
         (_, svgPath) => {
-          const fullPath = path.resolve(__dirname, svgPath)
+          const fullPath = path.resolve(
+            import.meta.dirname,
+            svgPath,
+          )
           const svgContent = readFileSync(fullPath, 'utf-8')
           return svgContent
         },

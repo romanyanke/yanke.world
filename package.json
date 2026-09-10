@@ -2,6 +2,7 @@
   "name": "yanke.world",
   "version": "1.0.0",
   "description": "My homepage",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "typecheck": "tsc --noEmit",
