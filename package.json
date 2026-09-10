@@ -16,6 +16,6 @@
     "vite-plugin-pwa": "^1.3.0"
   },
   "dependencies": {
-    "daynight": "4.0.3"
+    "daynight": "^4.0.5"
   }
 }
