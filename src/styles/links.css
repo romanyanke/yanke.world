@@ -16,9 +16,8 @@
 
 .links a {
   flex: 1;
-  transition: all var(--transition-options);
-  opacity: 0.5;
   transform: translateY(1px);
+  transition: transform var(--transition-options);
 }
 
 .links svg {
@@ -26,13 +25,13 @@
 }
 
 .links a path {
-  fill: var(--text);
+  fill: var(--icon);
+  transition: fill var(--transition-options);
 }
 
 .links a:hover,
 .links a:focus {
   transform: translateY(-2px);
-  opacity: 1;
 }
 
 .links a:hover path {

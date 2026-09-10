@@ -27,8 +27,8 @@ picture img {
 }
 
 header h1 {
-  color: #f7f7f7;
-  text-shadow: 0 0 6px #0c1817;
+  color: var(--on-image);
+  text-shadow: 0 0 6px var(--on-image-shadow);
   position: absolute;
   z-index: 1;
   margin: 0;

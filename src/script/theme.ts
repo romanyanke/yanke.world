@@ -41,9 +41,11 @@ function updateMeta() {
     isDarkMode ? 'dark' : 'light',
   )
 
-  const color = getComputedStyle(
-    document.body,
-  ).getPropertyValue('--background')
+  // Plain hex, kept in sync with --background in app.css by hand:
+  // reading the computed value gives back the raw oklch() token
+  // (modern color spaces serialise in their own space), and the
+  // theme-color meta wants a colour every UA can parse.
+  const color = isDarkMode ? '#1a1310' : '#f9f3f0'
 
   document
     .querySelector('meta[name="theme-color"]')
