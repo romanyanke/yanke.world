@@ -19,43 +19,23 @@
   itself does not affect its own tokens - only its descendants.
 */
 
+/*
+  prettier-ignore: kept on one line per token deliberately. The CSS
+  minifier never rewrites custom property values - they are arbitrary
+  tokens to a CSS parser - so any line break Prettier introduces here
+  survives into the built <style>.
+*/
+/* prettier-ignore */
 :root {
   color-scheme: light dark;
 
-  --background: light-dark(
-    oklch(0.968 0.008 50),
-    oklch(0.195 0.014 45)
-  );
-  /* 12.4:1 day / 15.6:1 night */
-  --text: light-dark(
-    oklch(0.3 0.016 50),
-    oklch(0.945 0.012 80)
-  );
-  /*  4.2:1 /  6.8:1 */
-  --caption: light-dark(
-    oklch(0.56 0.018 50),
-    oklch(0.7 0.016 60)
-  );
-  /*  5.1:1 /  6.8:1 */
-  --icon: light-dark(
-    oklch(0.52 0.016 50),
-    oklch(0.7 0.016 60)
-  );
-  /*  5.1:1 /  8.6:1 */
-  --link: light-dark(
-    oklch(0.53 0.14 38),
-    oklch(0.77 0.13 55)
-  );
-  /*  7.9:1 / 11.5:1 */
-  --link-hover: light-dark(
-    oklch(0.43 0.14 32),
-    oklch(0.86 0.11 60)
-  );
-  /*  1.6:1 /  1.9:1 */
-  --delimiter: light-dark(
-    oklch(0.82 0.012 50),
-    oklch(0.385 0.016 50)
-  );
+  --background: light-dark(oklch(0.968 0.008 50), oklch(0.195 0.014 45));
+  --text: light-dark(oklch(0.3 0.016 50), oklch(0.945 0.012 80)); /* 12.4:1 day / 15.6:1 night */
+  --caption: light-dark(oklch(0.56 0.018 50), oklch(0.7 0.016 60)); /*  4.2:1 /  6.8:1 */
+  --icon: light-dark(oklch(0.52 0.016 50), oklch(0.7 0.016 60)); /*  5.1:1 /  6.8:1 */
+  --link: light-dark(oklch(0.53 0.14 38), oklch(0.77 0.13 55)); /*  5.1:1 /  8.6:1 */
+  --link-hover: light-dark(oklch(0.43 0.14 32), oklch(0.86 0.11 60)); /*  7.9:1 / 11.5:1 */
+  --delimiter: light-dark(oklch(0.82 0.012 50), oklch(0.385 0.016 50)); /*  1.6:1 /  1.9:1 */
 }
 
 .day {
