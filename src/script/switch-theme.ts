@@ -8,12 +8,7 @@ if (toggle) {
   // and swallow the first click while the page is younger than
   // the animation
   let cooldown = -Infinity
-  const animationDuration =
-    parseFloat(
-      getComputedStyle(document.body).getPropertyValue(
-        '--day-length',
-      ),
-    ) * 1000
+  const animationDuration = readDuration('--day-length')
 
   const describeAction = () =>
     document.documentElement.classList.contains('night')
@@ -35,4 +30,20 @@ if (toggle) {
     syncLabel()
     cooldown = now
   })
+}
+
+// parseFloat alone would read --day-length: 600ms as 600 seconds
+function readDuration(token: string) {
+  const value = getComputedStyle(document.body)
+    .getPropertyValue(token)
+    .trim()
+  const parsed = /^([\d.]+)(ms|s)$/.exec(value)
+
+  if (!parsed) {
+    return 0
+  }
+
+  const [, amount, unit] = parsed
+
+  return Number(amount) * (unit === 's' ? 1000 : 1)
 }
