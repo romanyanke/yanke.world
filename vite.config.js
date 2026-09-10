@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [inlineSvgPlugin(), VitePWA()],
   build: {
     minify: true,
-    assetsInlineLimit: 0, // Ensures all assets are inlined
+    assetsInlineLimit: 0, // Never inline assets; keep them as separate files
   },
   server: { allowedHosts: ['ypro.local'], port: 3000 },
 })
