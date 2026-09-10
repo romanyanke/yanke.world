@@ -6,6 +6,17 @@ import path from 'path'
 export default defineConfig({
   plugins: [inlineSvgPlugin(), VitePWA()],
   build: {
+    // The floor implied by the CSS: oklch() and light-dark().
+    // package.json used to carry a browserslist query, but nothing
+    // in this pipeline read it - no autoprefixer, no
+    // postcss-preset-env, Vite drives esbuild directly - so it
+    // documented a support target that was never enforced.
+    target: [
+      'chrome123',
+      'edge123',
+      'firefox120',
+      'safari17.4',
+    ],
     minify: true,
     assetsInlineLimit: 0, // Never inline assets; keep them as separate files
   },

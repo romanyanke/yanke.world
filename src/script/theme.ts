@@ -1,4 +1,4 @@
-import daynight, { DaynightTheme } from 'daynight'
+import daynight, { type DaynightTheme } from 'daynight'
 import { timeGoes } from './calendar'
 
 let theme: DaynightTheme

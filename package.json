@@ -2,10 +2,10 @@
   "name": "yanke.world",
   "version": "1.0.0",
   "description": "My homepage",
-  "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
     "postbuild": "html-minifier-terser dist/index.html --output dist/index.html --collapse-whitespace --remove-comments --minify-css true --minify-js true"
@@ -14,6 +14,7 @@
   "devDependencies": {
     "html-minifier-terser": "^7.2.0",
     "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vite-plugin-pwa": "^1.3.0"
   },
