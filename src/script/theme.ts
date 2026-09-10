@@ -24,22 +24,20 @@ const themes: Record<DaynightTheme, DaynightTheme> = {
 
 let isDarkMode = theme === themes.night
 
-document.body.classList.add(themes[theme])
+document.documentElement.classList.add(themes[theme])
 updateMeta()
 
 export const toggleTheme = () => {
   isDarkMode = !isDarkMode
-  document.body.classList.toggle(themes.day)
-  document.body.classList.toggle(themes.night)
+  const root = document.documentElement.classList
+  root.toggle(themes.day)
+  root.toggle(themes.night)
   updateMeta()
   timeGoes()
 }
 
 function updateMeta() {
-  document.documentElement.style.setProperty(
-    'color-scheme',
-    isDarkMode ? 'dark' : 'light',
-  )
+  // color-scheme is handled by the .day / .night classes in app.css
 
   // Plain hex, kept in sync with --background in app.css by hand:
   // reading the computed value gives back the raw oklch() token

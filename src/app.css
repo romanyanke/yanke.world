@@ -7,32 +7,79 @@
   One warm axis: every neutral is tinted with the background hue (~50deg),
   the accent stays within hue 32-60deg in both themes.
   Comments show each step's WCAG contrast against its own background.
+
+  Every token is declared once, as light-dark(day, night). The value is
+  resolved against the used color-scheme of whoever reads the token, so
+  the .day / .night classes below only have to flip color-scheme. With
+  no class at all - before the theme script runs, or without JS - the
+  page follows the system preference instead of rendering unstyled.
+
+  The classes live on <html>, not <body>: light-dark() resolves against
+  the *inherited* color-scheme, so an element declaring color-scheme
+  itself does not affect its own tokens - only its descendants.
 */
+
+:root {
+  color-scheme: light dark;
+
+  --background: light-dark(
+    oklch(0.968 0.008 50),
+    oklch(0.195 0.014 45)
+  );
+  /* 12.4:1 day / 15.6:1 night */
+  --text: light-dark(
+    oklch(0.3 0.016 50),
+    oklch(0.945 0.012 80)
+  );
+  /*  4.2:1 /  6.8:1 */
+  --caption: light-dark(
+    oklch(0.56 0.018 50),
+    oklch(0.7 0.016 60)
+  );
+  /*  5.1:1 /  6.8:1 */
+  --icon: light-dark(
+    oklch(0.52 0.016 50),
+    oklch(0.7 0.016 60)
+  );
+  /*  5.1:1 /  8.6:1 */
+  --link: light-dark(
+    oklch(0.53 0.14 38),
+    oklch(0.77 0.13 55)
+  );
+  /*  7.9:1 / 11.5:1 */
+  --link-hover: light-dark(
+    oklch(0.43 0.14 32),
+    oklch(0.86 0.11 60)
+  );
+  /*  1.6:1 /  1.9:1 */
+  --delimiter: light-dark(
+    oklch(0.82 0.012 50),
+    oklch(0.385 0.016 50)
+  );
+}
 
 .day {
   color-scheme: light;
-
-  --background: oklch(0.968 0.008 50);
-  --text: oklch(0.3 0.016 50); /* 12.4:1 */
-  --caption: oklch(0.56 0.018 50); /*  4.2:1 */
-  --icon: oklch(0.52 0.016 50); /*  5.1:1 */
-  --link: oklch(0.53 0.14 38); /*  5.1:1 */
-  --link-hover: oklch(0.43 0.14 32); /*  7.9:1 */
-  --delimiter: oklch(0.82 0.012 50); /*  1.6:1 */
-  --image-filter: none;
 }
 
 .night {
   color-scheme: dark;
+}
 
-  --background: oklch(0.195 0.014 45);
-  --text: oklch(0.945 0.012 80); /* 15.6:1 */
-  --caption: oklch(0.7 0.016 60); /*  6.8:1 */
-  --icon: oklch(0.7 0.016 60); /*  6.8:1 */
-  --link: oklch(0.77 0.13 55); /*  8.6:1 */
-  --link-hover: oklch(0.86 0.11 60); /* 11.5:1 */
-  --delimiter: oklch(0.385 0.016 50); /*  1.9:1 */
+/* filter takes no colour, so light-dark() cannot express it */
+:root,
+.day {
+  --image-filter: none;
+}
+
+.night {
   --image-filter: brightness(0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.day) {
+    --image-filter: brightness(0.85);
+  }
 }
 
 body {

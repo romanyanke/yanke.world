@@ -3,7 +3,10 @@ import { toggleTheme } from './theme'
 const header = document.querySelector('header')
 
 if (header) {
-  let cooldown = 0
+  // not 0: that would read as "last toggled at navigation start"
+  // and swallow the first click while the page is younger than
+  // the animation
+  let cooldown = -Infinity
   const animationDuration =
     parseFloat(
       getComputedStyle(document.body).getPropertyValue(
