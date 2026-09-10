@@ -10,17 +10,29 @@
       name="description"
       content="Hi, my name is Roman Yanke."
     />
+    <!-- the standard name; the apple- prefixed one is still read by older iOS -->
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-capable"
       content="yes"
     />
     <meta name="theme-color" content="#f9f3f0" />
     <meta property="og:title" content="Roman Yanke" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yanke.world" />
     <meta
-      property="og:image"
-      content="src/assets/logo192.png"
+      property="og:description"
+      content="Hi, my name is Roman Yanke."
     />
+    <!-- absolute, and served from public/ so the path keeps no build hash:
+         crawlers cannot resolve a relative og:image -->
+    <meta
+      property="og:image"
+      content="https://yanke.world/og.png"
+    />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta name="twitter:card" content="summary" />
     <link
       rel="apple-touch-icon"
       href="src/assets/logo192.png"
