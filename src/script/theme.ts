@@ -1,49 +1,42 @@
 import daynight, { type DaynightTheme } from 'daynight'
 import { timeGoes } from './calendar'
 
-let theme: DaynightTheme
+const root = document.documentElement
 
-try {
-  theme = daynight().theme
-} catch (e) {
-  if (
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)')
-      .matches
-  ) {
-    theme = 'night'
-  } else {
-    theme = 'day'
-  }
-}
-
-const themes: Record<DaynightTheme, DaynightTheme> = {
-  day: 'day',
-  night: 'night',
-}
-
-let isDarkMode = theme === themes.night
-
-document.documentElement.classList.add(themes[theme])
+root.classList.add(detectTheme())
 updateMeta()
 
 export const toggleTheme = () => {
-  isDarkMode = !isDarkMode
-  const root = document.documentElement.classList
-  root.toggle(themes.day)
-  root.toggle(themes.night)
+  root.classList.toggle('day')
+  root.classList.toggle('night')
   updateMeta()
   timeGoes()
 }
 
-function updateMeta() {
-  // color-scheme is handled by the .day / .night classes in app.css
+function detectTheme(): DaynightTheme {
+  try {
+    return daynight().theme
+  } catch {
+    // daynight throws when the visitor's timezone is missing from its
+    // table; the system preference is the next best guess
+    return window.matchMedia?.(
+      '(prefers-color-scheme: dark)',
+    ).matches
+      ? 'night'
+      : 'day'
+  }
+}
 
-  // Plain hex, kept in sync with --background in app.css by hand:
-  // reading the computed value gives back the raw oklch() token
-  // (modern color spaces serialise in their own space), and the
-  // theme-color meta wants a colour every UA can parse.
-  const color = isDarkMode ? '#1a1310' : '#f9f3f0'
+function updateMeta() {
+  // Read the colour out of the stylesheet rather than keeping a copy
+  // here: --meta-theme-color is hex, so it comes back as rgb() and
+  // follows the theme on its own.
+  const probe = document.createElement('span')
+  probe.style.cssText =
+    'display:none;color:var(--meta-theme-color)'
+  document.body.append(probe)
+  const color = getComputedStyle(probe).color
+  probe.remove()
 
   document
     .querySelector('meta[name="theme-color"]')

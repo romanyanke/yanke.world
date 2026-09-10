@@ -36,6 +36,11 @@
   --link: light-dark(oklch(0.53 0.14 38), oklch(0.77 0.13 55)); /*  5.1:1 /  8.6:1 */
   --link-hover: light-dark(oklch(0.43 0.14 32), oklch(0.86 0.11 60)); /*  7.9:1 / 11.5:1 */
   --delimiter: light-dark(oklch(0.82 0.012 50), oklch(0.385 0.016 50)); /*  1.6:1 /  1.9:1 */
+
+  /* --background in plain hex, for the theme-color meta: a hex value
+     serialises back as rgb(), which every UA can parse, while oklch()
+     serialises in its own space. Keep the pair in step. */
+  --meta-theme-color: light-dark(#f9f3f0, #1a1310);
 }
 
 .day {
