@@ -1,6 +1,13 @@
+/* the theme toggle: a real button so Tab and Enter/Space reach it,
+   sized to sit exactly over the photo */
 .sky {
   --angle: 170deg;
 
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
   user-select: none;
   font-size: 1.2rem;
   position: absolute;

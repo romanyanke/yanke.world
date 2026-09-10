@@ -27,6 +27,9 @@ picture img {
 }
 
 header h1 {
+  /* the toggle button covers the photo; let clicks on the title
+     through to it, the way they passed through to the header before */
+  pointer-events: none;
   color: var(--on-image);
   text-shadow: 0 0 6px var(--on-image-shadow);
   position: absolute;
