@@ -36,7 +36,7 @@
   <body>
     <header>
       <h1>Roman Yanke</h1>
-      <picture title="Roman Yanke">
+      <picture>
         <source
           srcset="
             src/assets/romanyanke.webp,
@@ -45,10 +45,8 @@
           "
           type="image/webp"
         />
-        <img
-          src="src/assets/romanyanke.jpg"
-          alt="Profile picture"
-        />
+        <!-- decorative: the h1 above carries the same information -->
+        <img src="src/assets/romanyanke.jpg" alt="" />
       </picture>
       <div class="sky" aria-hidden="true">
         <span class="sun">🌞</span>
@@ -57,75 +55,83 @@
       <inline svg="src/assets/squircle.svg" />
     </header>
 
-    <dl>
-      <dt>Handle</dt>
-      <dd>
-        <div class="links">
-          <span>romanyanke</span>
-          <a
-            href="https://twitter.com/romanyanke"
-            title="Twitter"
+    <main>
+      <dl>
+        <dt>Handle</dt>
+        <dd>
+          <div class="links">
+            <span>romanyanke</span>
+            <a
+              href="https://twitter.com/romanyanke"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              <inline svg="src/assets/twitter.svg" />
+            </a>
+            <a
+              href="https://instagram.com/romanyanke"
+              aria-label="Instagram"
+              title="Instagram"
+            >
+              <inline svg="src/assets/instagram.svg" />
+            </a>
+            <a
+              href="https://t.me/romanyanke"
+              aria-label="Telegram"
+              title="Telegram"
+            >
+              <inline svg="src/assets/telegram.svg" />
+            </a>
+            <a
+              href="https://me.yanke.ru/"
+              aria-label="Tumblr"
+              title="Tumblr"
+            >
+              <inline svg="src/assets/tumblr.svg" />
+            </a>
+            <a
+              href="https://github.com/romanyanke"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <inline svg="src/assets/github.svg" />
+            </a>
+            <a
+              href="https://linkedin.com/in/romanyanke"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <inline svg="src/assets/linkedin.svg" />
+            </a>
+          </div>
+        </dd>
+        <dt>Position</dt>
+        <dd>
+          Lead Frontend Engineer at
+          <a href="https://www.simplinic.de">simplinic</a>
+        </dd>
+        <dt>About</dt>
+        <dd>
+          I have
+          <a href="https://pencil.yanke.world/" id="pencils"
+            >a collection of pencils</a
           >
-            <inline svg="src/assets/twitter.svg" />
-          </a>
-          <a
-            href="https://instagram.com/romanyanke"
-            title="Instagram"
+        </dd>
+        <dt>Residence</dt>
+        <dd>
+          Berlin, Germany
+          <span aria-label="Flag of Germany" role="img"
+            >🇩🇪</span
           >
-            <inline svg="src/assets/instagram.svg" />
-          </a>
-          <a
-            href="https://t.me/romanyanke"
-            title="Telegram"
+        </dd>
+        <dt>Email</dt>
+        <dd>
+          <a href="mailto:roman@yanke.world"
+            >roman@yanke.world</a
           >
-            <inline svg="src/assets/telegram.svg" />
-          </a>
-          <a
-            href="https://me.yanke.ru/"
-            title="Tumblr"
-          >
-            <inline svg="src/assets/tumblr.svg" />
-          </a>
-          <a
-            href="https://github.com/romanyanke"
-            title="GitHub"
-          >
-            <inline svg="src/assets/github.svg" />
-          </a>
-          <a
-            href="https://linkedin.com/in/romanyanke"
-            title="LinkedIn"
-          >
-            <inline svg="src/assets/linkedin.svg" />
-          </a>
-        </div>
-      </dd>
-      <dt>Position</dt>
-      <dd>
-        Lead Frontend Engineer at
-        <a href="https://www.simplinic.de">simplinic</a>
-      </dd>
-      <dt>About</dt>
-      <dd>
-        I have
-        <a href="https://pencil.yanke.world/" id="pencils"
-          >a collection of pencils</a
-        >
-      </dd>
-      <dt>Residence</dt>
-      <dd>
-        Berlin, Germany
-        <span aria-label="Flag of Germany" role="img"
-          >🇩🇪</span
-        >
-      </dd>
-      <dt>Email</dt>
-      <dd>
-        <a href="mailto:roman@yanke.world"
-          >roman@yanke.world</a
-        >
-      </dd>
-    </dl>
+        </dd>
+      </dl>
+    </main>
 
     <script type="module" async src="src/app.ts"></script>
   </body>
