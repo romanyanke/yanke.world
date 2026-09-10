@@ -9,43 +9,22 @@ dd {
   margin: 0;
 }
 
-dd:after {
+/*
+  Hairline separator. A real border, not a gradient with percentage
+  stops: the browser already picks the thinnest line the display can
+  draw, so one min-resolution step replaces the three
+  -webkit-min-device-pixel-ratio queries this used to need.
+*/
+dd:not(:last-of-type)::after {
   content: '';
   display: block;
-  height: 1px;
   margin: 0.8rem 0.2rem;
-  transition: background-image var(--transition-options);
-  background-image: linear-gradient(
-    var(--delimiter),
-    var(--delimiter)
-  );
+  border-top: 1px solid var(--delimiter);
+  transition: border-color var(--transition-options);
 }
 
-dd:last-of-type:after {
-  content: none;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-  dd:after {
-    background-image: linear-gradient(
-      var(--delimiter) 50%,
-      transparent 51%
-    );
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 3) {
-  dd:after {
-    background-image: linear-gradient(
-      var(--delimiter) 33%,
-      transparent 34%
-    );
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 4) {
-  dd:after {
-    background-image: linear-gradient(
-      var(--delimiter) 25%,
-      transparent 26%
-    );
+@media (min-resolution: 2x) {
+  dd:not(:last-of-type)::after {
+    border-top-width: 0.5px;
   }
 }
