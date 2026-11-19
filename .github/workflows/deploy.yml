@@ -16,13 +16,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
-
-      - name: Clean environment
-        run: rm -rf node_modules package-lock.json
+          node-version: '26.13.1'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
